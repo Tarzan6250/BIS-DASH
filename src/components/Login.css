@@ -1,0 +1,120 @@
+/* Apply styles only within the login-page class */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #a8d0e6, #b0e0e6, #87cefa, #add8e6, #e0ffff);
+  font-family: "Arial", sans-serif;
+  margin: 0;
+}
+
+/* Scoped styles for login-container */
+.login-container {
+  width: 420px;
+  padding: 25px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: rgb(40, 2, 175);
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  transform: translateY(-20px); /* Slight upward adjustment */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+/* Input field styles */
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 7px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.login-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-container input:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #fff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Button styles */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+
+.login-container button:hover {
+  background: linear-gradient(135deg, #ee0979, #ff6a00);
+  box-shadow: 0 4px 8px rgba(255, 105, 135, 0.5);
+}
+
+/* Create Account button styles */
+.create-account button {
+  background: none;
+  color: #ffeb3b;
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.create-account button:hover {
+  color: #ffc107;
+}
+
+.error-message {
+  text-align: center;
+  font-size: 14px;
+  color: #ff1744;
+  margin-bottom: 10px;
+}
+
+/* Animation for login container */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container {
+  animation: fadeIn 1s ease-in-out;
+}
